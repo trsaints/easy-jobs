@@ -8,6 +8,7 @@
 [class*="controllers__"] {
   padding: 0.375rem;
   border-radius: 0.5rem;
+  align-self: flex-start;
 }
 
 .controllers__search,
@@ -22,15 +23,14 @@
 }
 
 .controllers__payment {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
   width: max-content;
 }
 
-.payment__range {
+.payment__range--wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: .5rem;
   justify-content: space-between;
 }
 
@@ -38,4 +38,35 @@
   padding-left: 2rem;
   text-align: end;
   max-width: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .jobs__controllers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.125rem;
+  }
+
+  .controllers__search {
+    width: 100%;
+  }
+
+  [class*="controllers__"] {
+    padding: 0.5rem;
+  }
+
+  .payment__range--wrapper {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .jobs__controllers {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .controllers__search {
+    width: auto;
+  }
 }

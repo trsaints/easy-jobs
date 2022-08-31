@@ -1,3 +1,15 @@
 .jobs {
   padding: .75rem;
 }
+
+@media screen and (min-width: 768px) {
+  .jobs {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .jobs {
+    padding: 1.25rem 9.5rem;
+  }
+}

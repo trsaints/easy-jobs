@@ -31,7 +31,7 @@
   .info {
     padding: 2rem;
     flex-direction: row;
-    gap: 5.875rem;
+    gap: 5rem;
   }
 
   .info__navigation {

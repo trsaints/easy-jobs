@@ -30,6 +30,10 @@
   --c-white--l: hsl(240, 1%, 98%);
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: var(--c-black--d);
@@ -37,20 +41,24 @@ body {
 
 body * {
   color: inherit;
+  font-size: inherit;
 }
 
 img {
   max-width: 100%;
 }
 
-a, button, label {
+input {
+  width: auto;
+}
+
+a, button, label, input[type="submit"] {
   cursor: pointer;
 }
 
 .text--readonly {
   visibility: hidden;
+  display: inline;
   position: absolute;
-  width: 1px !important;
-  height: 1px !important;
   z-index: -10;
 }

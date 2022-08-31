@@ -1,0 +1,41 @@
+.jobs__controllers {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-block: 1.25rem;
+}
+
+[class*="controllers__"] {
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+}
+
+.controllers__search,
+.controllers__payment {
+  background-color: var(--c-white--d);
+}
+
+.controllers__region {
+  background-color: var(--c-purple--ds);
+  color: var(--c-white--l);
+  width: max-content;
+}
+
+.controllers__payment {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: max-content;
+}
+
+.payment__range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.range__input {
+  padding-left: 2rem;
+  text-align: end;
+  max-width: 8rem;
+}

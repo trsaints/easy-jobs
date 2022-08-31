@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Easy Jobs ─ Trabalhos freelance sob medida"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./app/assets/icons/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./app/assets/icons/css/brands.min.css" />
+    <link rel="stylesheet" href="./app/assets/icons/css/solid.min.css" />
+    <link rel="stylesheet" href="./app/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Easy Jobs ─ Trabalhos freelance sob medida</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__menu" type="button">
+        <i class="fa-solid fa-bars"></i>
+        <span class="text--readonly">Mostrar menu</span>
+      </button>
+
+      <nav class="header__navigation">
+        <ul class="navigation_links">
+          <li class="navigation_item">
+            <a href="#" class="item_link">Trabalhos</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#" class="item_link">Sobre nós</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#" class="item_link">Divulgue conosco</a>
+          </li>
+          <li class="navigation_item">
+            <a href="#" class="item_link">Suporte</a>
+          </li>
+        </ul>
+      </nav>
+
+      <span class="header__logo">
+        <img src="./app/assets/images/easy-jobs-logo-extended.svg" alt="" />
+      </span>
+
+      <div class="header__profile">
+        <a href="#" class="profile__link">
+          <i class="fa-solid fa-user"></i>
+          <span class="text--readonly">Perfil</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="jobs">
+      <div class="jobs__controllers">
+        <label class="controllers__search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span class="text--readonly">Buscar</span>
+          <input
+            class="search__input"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Jardinagem"
+          />
+        </label>
+
+        <div class="controllers__region">
+          <label classs="region__select--label" for="state">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text--readonly"> Busque por região </span>
+          </label>
+
+          <select class="region__select" name="state" id="state">
+            <option class="select__option" value="DF">
+              DF ─ Distrito Federal
+            </option>
+            <option class="select__option" value="GO">GO ─ Goiás</option>
+          </select>
+        </div>
+
+        <div class="controllers__payment">
+          <p>
+            <span class="text--readonly"> Busque por valor</span>
+          </p>
+
+          <label class="payment__range">
+            <i class="fa-solid fa-money-bills"></i>
+            Mínimo
+            <input
+              class="range__input"
+              type="number"
+              name="payment-min"
+              id="payment-min"
+              step="0.1"
+            />
+          </label>
+
+          <label class="payment__range">
+            <i class="fa-solid fa-money-bills"></i>
+            Máximo
+            <input
+              class="range__input"
+              type="number"
+              name="payment-max"
+              id="payment-max"
+              step="0.1"
+            />
+          </label>
+        </div>
+      </div>
+
+      <section class="jobs__results">
+        <h3 class="results__placeholder">
+          Mostrando 1 ─ 50 de 132 trabalhos encontrados
+        </h3>
+
+        <article class="results__item">
+          <div class="item__banner">
+          </div>
+
+          <div class="item--wrapper">
+            <h5 class="item__title">Jardineiro (c/ experiência)</h5>
+
+            <ul class="item__details">
+              <li class="details__price">R$ 150</li>
+
+              <li class="details__location">Taguatinga ─ DF</li>
+            </ul>
+
+            <div class="item__options">
+              <a class="options__link">Ver Detalhes</a>
+              <a class="options__link">Conversar</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <aside class="info">
+      <a href="" class="navigation__link" title="Início">
+        <img
+          src="./app/assets/images/easy-jobs-logo-extended.svg"
+          alt=""
+          class="info__logo"
+        />
+      </a>
+
+      <nav class="info__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Quem somos nós</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Política de privacidade</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="" class="navigation__link">Programa de fidelidade</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form action="index.html" class="info__contact">
+        <fieldset class="contact__fieldset">
+          <legend class="fieldset__legend">Fale conosco</legend>
+
+          <label class="fieldset__section"
+            >Nome <input type="text" class="section__input"
+          /></label>
+
+          <label class="fieldset__section"
+            >Mensagem
+            <textarea name="" class="section__textarea"></textarea>
+          </label>
+        </fieldset>
+
+        <input class="contact__submit" type="submit" value="Enviar mensagem" />
+      </form>
+    </aside>
+
+    <footer class="about">
+      <p>
+        Easy Jobs ─ Encontre um trabalho, fácil. <br />
+        2022 ─ Todos os direitos reservados
+      </p>
+    </footer>
+  </body>
+</html>

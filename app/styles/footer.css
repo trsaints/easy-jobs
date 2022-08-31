@@ -1,0 +1,10 @@
+.about {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem .75rem;
+
+  background: var(--c-blue);
+  color: var(--c-white--l);
+  font-weight: 700;
+}

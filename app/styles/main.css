@@ -1,0 +1,56 @@
+@import url('./normalize.css');
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./jobs.css');
+@import url('./jobs-controllers.css');
+@import url('./jobs-results.css');
+@import url('./info.css');
+@import url('./info-contact.css');
+@import url('./footer.css');
+
+:root {
+  --c-purple--ds: hsl(273, 76%, 46%);
+  --c-purple--d: hsl(273, 76%, 56%);
+  --c-purple: hsl(273, 76%, 66%);
+  --c-purple--l: hsl(273, 76%, 76%);
+  --c-purple--ls: hsl(273, 76%, 86%);
+  --c-blue--ds: hsl(240, 70%, 40%);
+  --c-blue--d: hsl(240, 70%, 50%);
+  --c-blue: hsl(240, 70%, 60%);
+  --c-blue--l: hsl(240, 70%, 70%);
+  --c-black--ds: hsl(300, 1%, 5%);
+  --c-black--d: hsl(300, 1%, 10%);
+  --c-black: hsl(300, 1%, 18%);
+  --c-gray: hsl(300, 1%, 28%);
+  --c-gray--l: hsl(300, 1%, 38%);
+  --c-gray--ls: hsl(300, 1%, 48%);
+  --c-white--ds: hsl(240, 1%, 68%);
+  --c-white--d: hsl(240, 1%, 78%);
+  --c-white: hsl(240, 1%, 88%);
+  --c-white--l: hsl(240, 1%, 98%);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--c-black--d);
+}
+
+body * {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, button, label {
+  cursor: pointer;
+}
+
+.text--readonly {
+  visibility: hidden;
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  z-index: -10;
+}

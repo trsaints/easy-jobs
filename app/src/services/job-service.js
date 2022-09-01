@@ -31,7 +31,7 @@ export const jobService = {
       headers: {
         "X-Access-Key": `${this.apiKey}`,
         "X-Bin-Meta": false,
-        "X-JSON-Path": "$..cities",
+        "X-JSON-Path": "$..cities.*",
         "Content-Type": "application/json",
       },
     };

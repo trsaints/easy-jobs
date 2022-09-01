@@ -71,7 +71,7 @@
     flex-wrap: nowrap;
   }
   .controllers__search {
-    width: auto;
+    width: 20rem;
   }
 
   .controllers__region {

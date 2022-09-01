@@ -53,8 +53,9 @@
     padding-inline: 9.5rem;
   }
 
-  .header__logo {
+  .header__logo,
+  .header__menu,
+  .header__profile {
     flex: 1;
   }
 }
-

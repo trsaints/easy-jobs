@@ -27,8 +27,6 @@ export const regionController = {
     cityOption.textContent = formatCity();
     cityOption.value = formatCity();
 
-    console.log(city);
-
     return cityOption;
   },
 };

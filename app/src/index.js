@@ -1,7 +1,22 @@
-import { jobService } from "./services/job-service.js";
+import { elementController } from "./controllers/element-controller.js";
+import { jobsController } from "./controllers/jobs-controller.js";
+import { regionController } from "./controllers/region-controller.js";
 
-const str = jobService.listPerCity("taguatinga");
-const str2 = jobService.listCities();
+(() => {
+  const regions = document.querySelector("[data-element='regions']");
+  const results = document.querySelector("[data-element='results']");
 
-console.log(str.then(data => console.log(data)))
-console.log(str2.then(data => console.log(data)))
+  regionController.renderRegions();
+
+  regions.addEventListener("change", (evt) => {
+    const currentCity = evt.target.value.toLowerCase();
+    console.log(currentCity);
+    elementController.clearContent(results);
+
+    if (currentCity === "all") {
+      return;
+    } else {
+      jobsController.renderJobs(currentCity);
+    }
+  });
+})();

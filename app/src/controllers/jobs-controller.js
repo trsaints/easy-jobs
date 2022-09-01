@@ -96,6 +96,8 @@ export const jobsController = {
       "li",
       "details__location"
     );
+    const locationIcon = elementController.generateElement("i", "fa-solid");
+    locationIcon.classList.add("fa-location-dot");
 
     let formatCity = () => {
       let firstLetter = job.city[0].toUpperCase();
@@ -104,7 +106,8 @@ export const jobsController = {
     };
 
     price.textContent = job.payment;
-    location.textContent = formatCity();
+    location.textContent = `${formatCity()} `;
+    location.appendChild(locationIcon);
 
     tags.appendChild(price);
     tags.appendChild(location);

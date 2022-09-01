@@ -3,15 +3,38 @@ import { Job } from "../models/Job.js";
 import { jobService } from "../services/job-service.js";
 
 export const jobsController = {
-  renderJobs(city) {
+  renderJobs(path) {
     const resultWrapper = document.querySelector("[data-element='results']");
 
-    jobService.listPerCity(city).then((jobs) => {
-      jobs[0].forEach((job) => {
-        resultWrapper.appendChild(this.generateCard(new Job(job, city)))
-      });
-    });
+    const renderType = {
+      specify(jobs) {
+        jobs[0].forEach((job) => {
+          console.log(job);
+          resultWrapper.appendChild(
+            jobsController.generateCard(new Job(job, path))
+          );
+        });
+      },
+      listAll(regions) {
+        regions.forEach((region) => {
+          region[region.name].forEach((job) => {
+            resultWrapper.appendChild(
+              jobsController.generateCard(new Job(job, region.name))
+            );
+          });
+        });
+      },
+    };
 
+    if (path !== "all") {
+      jobService.listPerCity(path).then((jobs) => {
+        renderType.specify(jobs);
+      });
+    } else {
+      jobService.listCities().then((regions) => {
+        renderType.listAll(regions);
+      });
+    }
   },
 
   generateCard(job) {
@@ -68,15 +91,17 @@ export const jobsController = {
 
   generateCardTags(job) {
     const tags = elementController.generateElement("ul", "item__details");
-    const price = elementController.generateElement("li","details__price");
-    const location = elementController.generateElement("li","details__location");
+    const price = elementController.generateElement("li", "details__price");
+    const location = elementController.generateElement(
+      "li",
+      "details__location"
+    );
 
     let formatCity = () => {
       let firstLetter = job.city[0].toUpperCase();
       let result = job.city.replace(job.city[0], firstLetter);
       return result;
     };
-
 
     price.textContent = job.payment;
     location.textContent = formatCity();
@@ -95,8 +120,8 @@ export const jobsController = {
     chatLink.setAttribute("href", "#");
     detailLink.setAttribute("href", "#");
 
-    chatLink.textContent = "Conversar";
-    detailLink.textContent = "Ver Detalhes";
+    chatLink.textContent = "Conversar ";
+    detailLink.textContent = "Ver Detalhes ";
 
     options.appendChild(detailLink);
     options.appendChild(chatLink);

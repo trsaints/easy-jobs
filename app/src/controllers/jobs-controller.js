@@ -71,8 +71,15 @@ export const jobsController = {
     const price = elementController.generateElement("li","details__price");
     const location = elementController.generateElement("li","details__location");
 
+    let formatCity = () => {
+      let firstLetter = job.city[0].toUpperCase();
+      let result = job.city.replace(job.city[0], firstLetter);
+      return result;
+    };
+
+
     price.textContent = job.payment;
-    location.textContent = job.city.toUpperCase();
+    location.textContent = formatCity();
 
     tags.appendChild(price);
     tags.appendChild(location);

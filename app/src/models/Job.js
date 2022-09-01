@@ -4,11 +4,15 @@ export class Job {
   #description;
   #city;
 
+  static count;
+
   constructor(job, city) {
     this.#title = job.title;
     this.#payment = job.payment;
     this.#description = job.description;
     this.#city = city;
+
+    Job.count++;
   }
 
   get title() {

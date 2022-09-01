@@ -116,12 +116,20 @@ export const jobsController = {
     const options = elementController.generateElement("div", "item__options");
     const detailLink = elementController.generateElement("a", "options__link");
     const chatLink = elementController.generateElement("a", "options__link");
+    const detailIcon = elementController.generateElement("i", "fa-solid");
+    const chatIcon = elementController.generateElement("i", "fa-solid");
 
     chatLink.setAttribute("href", "#");
     detailLink.setAttribute("href", "#");
 
     chatLink.textContent = "Conversar ";
     detailLink.textContent = "Ver Detalhes ";
+
+    detailIcon.classList.add("fa-circle-info");
+    chatIcon.classList.add("fa-comment-dots");
+
+    chatLink.appendChild(chatIcon);
+    detailLink.appendChild(detailIcon);
 
     options.appendChild(detailLink);
     options.appendChild(chatLink);

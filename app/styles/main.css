@@ -65,8 +65,10 @@ a, button, label, input[type="submit"] {
 
 .text--readonly {
   visibility: hidden;
-  display: inline;
+  display: inline-block;
   position: absolute;
+  width: 1px;
+  overflow: hidden;
   z-index: -10;
 }
 

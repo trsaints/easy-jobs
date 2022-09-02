@@ -76,3 +76,16 @@ a, button, label, input[type="submit"] {
 .loading {
   background: url('../assets/images/loading_thumbnail.svg') center / 15rem no-repeat;
 }
+
+*::-webkit-scrollbar {
+  width: .5rem;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--c-white);        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--c-blue);    /* color of the scroll thumb */
+  border-radius: 1.25rem;       /* roundness of the scroll thumb */
+}

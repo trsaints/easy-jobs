@@ -44,5 +44,28 @@ export const jobService = {
   
     throw new Error("Não foi possível listar as cidades.");
 
+  },
+
+  async detailJob(id) {
+    const binURL = `https://api.jsonbin.io/v3/b/630eafbe5c146d63ca868bfe/`;
+  
+    const options = {
+      method: "GET",
+      headers: {
+        "X-Access-Key": `${this.apiKey}`,
+        "X-Bin-Meta": false,
+        "X-JSON-Path": `$..[?(@.id==${id})]`,
+        "Content-Type": "application/json",
+      },
+    };
+  
+    const response = await fetch(binURL, options);
+  
+    if (response.ok) {
+      return response.json();
+    }
+  
+    throw new Error("Não foi possível detalhar este trabalho.");
+
   }
 }

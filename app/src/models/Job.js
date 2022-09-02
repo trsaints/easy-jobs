@@ -3,6 +3,7 @@ export class Job {
   #payment;
   #description;
   #city;
+  #id;
 
   static count = 0;
 
@@ -11,6 +12,7 @@ export class Job {
     this.#payment = job.payment;
     this.#description = job.description;
     this.#city = city;
+    this.#id = job.id;
 
     Job.count++;
   }
@@ -33,5 +35,9 @@ export class Job {
 
   get count() {
     return Job.count;
+  }
+
+  get id() {
+    return this.#id;
   }
 }

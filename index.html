@@ -180,9 +180,9 @@
 
         <div class="results--wrapper loading" data-element="results"></div>
 
-        <div class="results__modal">
+        <div class="results__modal" data-element="modal">
           <div class="modal__close--wrapper">
-            <button class="modal__close--btn">
+            <button type="button" class="modal__close--btn" data-modal="close">
               <span class="text--readonly">Fechar modal</span>
               <i class="fa-solid fa-circle-xmark"></i>
             </button>
@@ -192,27 +192,28 @@
             src="./app/assets/images/maria-hada-TBuXA-TNtLI-unsplash.jpg"
             alt=""
             class="modal__img"
+            data-modal="banner"
           />
 
           <div class="modal__content">
-            <h3 class="modal__title">Trabalho</h3>
+            <h3 class="modal__title" data-modal="title">Trabalho</h3>
 
             <ul class="modal__details">
-              <li class="modal__price">R$ 1000</li>
-              <li class="modal__location">
+              <li class="modal__price" data-modal="price">R$ 1000</li>
+              <li class="modal__location" data-modal="location">
                 <i class="fa-solid fa-location-dot"></i>
                 Taguatinga
               </li>
             </ul>
 
-            <p class="modal__description">
+            <p class="modal__description" data-modal="description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
               consequuntur accusamus atque molestiae adipisci, repellendus ipsam
               modi dignissimos nostrum placeat quidem est voluptatem aliquam
               doloribus facere fugit? Aspernatur, consequuntur obcaecati.
             </p>
 
-            <button class="modal__chat--btn">
+            <button type="button" class="modal__chat--btn">
               Conversar <i class="fa-solid fa-comment-dots"></i>
             </button>
           </div>
@@ -270,7 +271,7 @@
       </p>
     </footer>
 
-    <!--     <script src="./app/src/index.js" type="module"></script>
- -->
+    <script src="./app/src/index.js" type="module"></script>
+ 
   </body>
 </html>

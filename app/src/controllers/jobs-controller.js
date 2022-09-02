@@ -1,4 +1,5 @@
 import { elementController } from "../controllers/element-controller.js";
+import { modalController } from "./modal-controller.js";
 import { Job } from "../models/Job.js";
 import { jobService } from "../services/job-service.js";
 
@@ -134,24 +135,29 @@ export const jobsController = {
 
   generateCardLinks() {
     const options = elementController.generateElement("div", "item__options");
-    const detailLink = elementController.generateElement("a", "options__link");
+    const detailButton = elementController.generateElement("button", "options__detail");
     const chatLink = elementController.generateElement("a", "options__link");
     const detailIcon = elementController.generateElement("i", "fa-solid");
     const chatIcon = elementController.generateElement("i", "fa-solid");
 
     chatLink.setAttribute("href", "#");
-    detailLink.setAttribute("href", "#");
+    detailButton.setAttribute("href", "#");
 
     chatLink.textContent = "Conversar ";
-    detailLink.textContent = "Ver Detalhes ";
+    detailButton.textContent = "Ver Detalhes ";
 
     detailIcon.classList.add("fa-circle-info");
     chatIcon.classList.add("fa-comment-dots");
 
-    chatLink.appendChild(chatIcon);
-    detailLink.appendChild(detailIcon);
+    detailButton.dataset.modal = "open";
+    detailButton.addEventListener("click", () => {
+      modalController.openModal();
+    })
 
-    options.appendChild(detailLink);
+    chatLink.appendChild(chatIcon);
+    detailButton.appendChild(detailIcon);
+
+    options.appendChild(detailButton);
     options.appendChild(chatLink);
 
     return options;

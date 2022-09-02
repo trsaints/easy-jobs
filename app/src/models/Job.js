@@ -4,7 +4,7 @@ export class Job {
   #description;
   #city;
 
-  static count;
+  static count = 0;
 
   constructor(job, city) {
     this.#title = job.title;
@@ -29,5 +29,9 @@ export class Job {
 
   get city() {
     return this.#city;
+  }
+
+  get count() {
+    return Job.count;
   }
 }

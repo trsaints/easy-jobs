@@ -6,6 +6,8 @@ export const jobsController = {
   renderJobs(path) {
     const resultWrapper = document.querySelector("[data-element='results']");
 
+    Job.count = 0;
+
     const renderType = {
       specify(jobs) {
         jobs[0].forEach((job) => {
@@ -29,12 +31,22 @@ export const jobsController = {
     if (path !== "all") {
       jobService.listPerCity(path).then((jobs) => {
         renderType.specify(jobs);
+        this.showResultCount(Job.count);
       });
     } else {
       jobService.listCities().then((regions) => {
         renderType.listAll(regions);
+        this.showResultCount(Job.count);
       });
     }
+  },
+
+  showResultCount(count) {
+    const resultsPlaceholder = document.querySelector(
+      "[data-element='resultsCount']"
+    );
+
+    resultsPlaceholder.textContent = `Mostrando ${count} trabalho(s) encontrado(s)`;
   },
 
   generateCard(job) {

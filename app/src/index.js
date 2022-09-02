@@ -7,7 +7,7 @@ import { regionController } from "./controllers/region-controller.js";
   const results = document.querySelector("[data-element='results']");
 
   regionController.renderRegions();
-  jobsController.renderJobs("all")
+  jobsController.renderJobs("all");
 
   regions.addEventListener("change", (evt) => {
     const currentCity = evt.target.value.toLowerCase();

@@ -1,6 +1,6 @@
 @import url('./animations.css');
 
-.jobs__results {
+.results--wrapper {
   padding-block: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -117,6 +117,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .results--wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .results__item {
     align-items: center;
     max-width: 30rem;

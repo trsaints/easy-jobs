@@ -32,11 +32,13 @@ export const jobsController = {
       jobService.listPerCity(path).then((jobs) => {
         renderType.specify(jobs);
         this.showResultCount(Job.count);
+        resultWrapper.classList.remove("loading");
       });
     } else {
       jobService.listCities().then((regions) => {
         renderType.listAll(regions);
         this.showResultCount(Job.count);
+        resultWrapper.classList.remove("loading");
       });
     }
   },

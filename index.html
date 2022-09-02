@@ -42,9 +42,24 @@
       sizes="192x192"
       href="./android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="./ms-icon-144x144.png" />
@@ -117,10 +132,13 @@
             <span class="text--readonly"> Busque por região </span>
           </label>
 
-          <select class="region__select" name="state" id="state" data-element="regions">
-            <option class="select__option" value="all">
-              Todas
-            </option>
+          <select
+            class="region__select"
+            name="state"
+            id="state"
+            data-element="regions"
+          >
+            <option class="select__option" value="all">Todas</option>
           </select>
         </div>
 
@@ -157,12 +175,47 @@
         </div>
       </div>
 
-      <section class="jobs__results" >
-        <h3 class="results__placeholder" data-element="resultsCount">
-        </h3>
+      <section class="jobs__results">
+        <h3 class="results__placeholder" data-element="resultsCount"></h3>
 
-        <div class="results--wrapper loading" data-element="results">
-          
+        <div class="results--wrapper loading" data-element="results"></div>
+
+        <div class="results__modal">
+          <div class="modal__close--wrapper">
+            <button class="modal__close--btn">
+              <span class="text--readonly">Fechar modal</span>
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+
+          <img
+            src="./app/assets/images/maria-hada-TBuXA-TNtLI-unsplash.jpg"
+            alt=""
+            class="modal__img"
+          />
+
+          <div class="modal__content">
+            <h3 class="modal__title">Trabalho</h3>
+
+            <ul class="modal__details">
+              <li class="modal__price">R$ 1000</li>
+              <li class="modal__location">
+                <i class="fa-solid fa-location-dot"></i>
+                Taguatinga
+              </li>
+            </ul>
+
+            <p class="modal__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod
+              consequuntur accusamus atque molestiae adipisci, repellendus ipsam
+              modi dignissimos nostrum placeat quidem est voluptatem aliquam
+              doloribus facere fugit? Aspernatur, consequuntur obcaecati.
+            </p>
+
+            <button class="modal__chat--btn">
+              Conversar <i class="fa-solid fa-comment-dots"></i>
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -217,6 +270,7 @@
       </p>
     </footer>
 
-    <script src="./app/src/index.js" type="module"></script>
+    <!--     <script src="./app/src/index.js" type="module"></script>
+ -->
   </body>
 </html>

@@ -1,0 +1,132 @@
+.results__modal.visible {
+  display: grid;
+  grid-template-areas: "banner" "main";
+  grid-template-rows: 1fr 2fr;
+  position: fixed;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  top: 2%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  border-radius: 0.75rem;
+
+  max-width: 90vw;
+  max-height: 37.5rem;
+
+  background-color: var(--c-white--l);
+
+  transform: translateY(0);
+}
+
+.results__modal {
+  display: none;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.modal__close--wrapper {
+  padding: 0.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 12;
+  color: var(--c-red);
+  font-weight: 700;
+  width: 100%;
+}
+
+.modal__close--btn {
+  transform: scale(1.2);
+}
+
+.modal__img {
+  max-height: 100%;
+  position: relative;
+  place-self: center;
+  width: 100%;
+  object-fit: cover;
+  z-index: 11;
+  border-start-start-radius: 0.75rem;
+  border-start-end-radius: 0.75rem;
+  grid-area: banner;
+}
+
+.modal__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.modal__content {
+  padding: .5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  grid-area: main;
+}
+
+.modal__details {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.modal__details > * {
+  border-radius: 1rem;
+  background-color: var(--c-white);
+  font-size: 1.125rem;
+  padding: 0.375rem;
+}
+
+.modal__chat--btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--c-blue--d);
+  color: var(--c-white--l);
+  font-size: 1.25rem;
+  align-self: center;
+
+  transition: all 0.3s ease;
+}
+
+.modal__chat--btn:hover,
+.modal__chat--btn:focus {
+  transform: scale(1.05);
+  background-color: var(--c-blue--ds);
+}
+
+@media screen and (min-width: 512px) {
+  .modal__description {
+    font-size: 1.125rem;
+  }
+
+  .modal__title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal__close--btn {
+    transform: scale(1.5);
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .results__modal.visible {
+    grid-template-areas: "banner main";
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .modal__img {
+    border-start-end-radius: 0;
+    border-end-start-radius: 0.75rem;
+  }
+
+  .modal__content {
+    place-self: center;
+  }
+}

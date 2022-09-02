@@ -78,7 +78,8 @@
   font-size: 0.875rem;
 }
 
-.options__link {
+.options__link,
+.options__detail {
   flex: 1;
   word-break: keep-all;
   padding: 0.75rem;
@@ -94,12 +95,12 @@
   transform: scale(1.05);
 }
 
-.options__link:first-child {
+.options__detail {
   background-color: var(--c-purple--d);
 }
 
-.options__link:first-child:hover,
-.options__link:first-child:focus {
+.options__detail:hover,
+.options__detail:focus {
   background-color: var(--c-purple--ds);
 }
 

@@ -74,7 +74,6 @@ export const jobsController = {
     card.dataset.job = job.id;
   },
 
-
   generateCardContent(job) {
     const itemContent = elementController.generateElement(
       "div",

@@ -1,7 +1,7 @@
 import { jobService } from "../services/job-service.js";
 
 export const modalController = {
-  renderContent(job) {
+  renderContent(job, city) {
     this.cleanContent();
 
     const modal = {
@@ -16,7 +16,7 @@ export const modalController = {
       console.log(details)
       modal.title.textContent = details[0].title;
       modal.price.textContent = details[0].payment;
-      modal.location.textContent = details[0].location;
+      modal.location.innerHTML = city;
       modal.description.innerHTML = this.formatContent(details[0].description);
     });
   },
@@ -69,6 +69,8 @@ export const modalController = {
   openModal(target) {
     const modal = document.querySelector("[data-element='modal']");
     const targetRoot = target.parentNode.parentNode.parentNode;
+    const targetLocation = targetRoot.querySelector(".details__location");
+    const jobCity = `${targetLocation.textContent} <i class="fa-solid fa-location-dot"></i>`;
     const jobId = targetRoot.dataset.job;
 
     const isVisible = modal.classList.contains("visible");
@@ -77,6 +79,6 @@ export const modalController = {
       modal.classList.add("visible");
     }
 
-    this.renderContent(jobId);
+    this.renderContent(jobId, jobCity);
   },
 };

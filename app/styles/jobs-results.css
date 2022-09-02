@@ -1,4 +1,4 @@
-@import url('./animations.css');
+@import url("./animations.css");
 
 .results--wrapper {
   padding-block: 1.25rem;
@@ -11,7 +11,7 @@
 .results__placeholder {
   color: var(--c-gray--ls);
   font-weight: 700;
-  border-bottom: .25rem solid var(--c-white--ds);
+  border-bottom: 0.25rem solid var(--c-white--ds);
 }
 
 .results__item {
@@ -19,20 +19,28 @@
   flex-direction: column;
   align-items: stretch;
   gap: 1rem;
-  padding-block: 1.25rem;
+  padding: 1rem;
+  border-radius: .25rem;
 
-  animation: fade-in .3s forwards;
+  animation: fade-in 0.3s forwards;
+  transition: all .3s ease;
+}
+
+.results__item:hover,
+.results__item:focus-within {
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px 2px var(--c-white);
 }
 
 .item__banner {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .item--wrapper {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
   flex: 3;
 }
 
@@ -46,12 +54,12 @@
 .item__details {
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .item__details > * {
   border-radius: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: var(--c-white);
   align-self: flex-start;
 }
@@ -63,25 +71,42 @@
 .item__options {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
-  font-size: .875rem;
+  gap: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .options__link {
   flex: 1;
   word-break: keep-all;
-  padding: .75rem;
-  border-radius: .25rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
   color: var(--c-white--l);
   text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.options__link:hover,
+.options__link:focus {
+  transform: scale(1.05);
 }
 
 .options__link:first-child {
   background-color: var(--c-purple--d);
 }
 
+.options__link:first-child:hover,
+.options__link:first-child:focus {
+  background-color: var(--c-purple--ds);
+}
+
 .options__link:last-child {
   background-color: var(--c-blue--d);
+}
+
+.options__link:last-child:hover,
+.options__link:last-child:focus {
+  background-color: var(--c-blue--ds);
 }
 
 @media screen and (min-width: 512px) {
@@ -93,7 +118,7 @@
 @media screen and (min-width: 768px) {
   .results__placeholder {
     font-size: 1.125rem;
-  }  
+  }
 
   .results__item {
     flex-direction: row;
@@ -126,6 +151,6 @@
 
   .results__item {
     align-items: center;
-    max-width: 30rem;
+    max-width: 32rem;
   }
 }

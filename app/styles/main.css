@@ -16,18 +16,18 @@
   --c-purple--ls: hsl(273, 76%, 86%);
   --c-blue--ds: hsl(240, 70%, 40%);
   --c-blue--d: hsl(240, 70%, 50%);
-  --c-blue: hsl(240, 70%, 60%);
+  --c-blue: #5252e0;
   --c-blue--l: hsl(240, 70%, 70%);
-  --c-black--ds: hsl(300, 1%, 5%);
-  --c-black--d: hsl(300, 1%, 10%);
-  --c-black: hsl(300, 1%, 18%);
+  --c-black--ds: #0d0d0d;
+  --c-black--d: #1a191a;
+  --c-black: #2e2d2e;
   --c-gray: hsl(300, 1%, 28%);
   --c-gray--l: hsl(300, 1%, 38%);
   --c-gray--ls: hsl(300, 1%, 48%);
   --c-white--ds: hsl(240, 1%, 68%);
-  --c-white--d: hsl(240, 1%, 78%);
-  --c-white: hsl(240, 1%, 88%);
-  --c-white--l: hsl(240, 1%, 98%);
+  --c-white--d: #c6c6c7;
+  --c-white: #e0e0e1;
+  --c-white--l: #fafafa;
 }
 
 html {
@@ -61,4 +61,8 @@ a, button, label, input[type="submit"] {
   display: inline;
   position: absolute;
   z-index: -10;
+}
+
+.loading {
+  background: url('../assets/images/loading_thumbnail.svg') center / 15rem no-repeat;
 }

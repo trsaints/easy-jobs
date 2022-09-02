@@ -1,3 +1,5 @@
+@import url('./animations.css');
+
 .jobs__results {
   padding-block: 1.25rem;
   display: flex;
@@ -16,6 +18,8 @@
   align-items: center;
   gap: 1rem;
   padding-block: 1.25rem;
+
+  animation: fade-in .3s forwards;
 }
 
 .item__banner {

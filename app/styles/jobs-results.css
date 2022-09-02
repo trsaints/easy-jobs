@@ -66,6 +66,9 @@
 
 .details__price {
   min-width: max-content;
+  background-color: var(--c-green--ls);
+  color: var(--c-gray);
+  font-weight: 700;
 }
 
 .item__options {

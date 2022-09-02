@@ -28,6 +28,12 @@
   --c-white--d: #c6c6c7;
   --c-white: #e0e0e1;
   --c-white--l: #fafafa;
+  --c-green--ds: hsl(143, 71%, 38%);
+  --c-green--d: hsl(143, 71%, 48%);
+  --c-green: hsl(143, 71%, 58%);
+  --c-green--l: hsl(143, 71%, 68%);
+  --c-green--ls: hsl(143, 71%, 78%);
+  --c-red: #e06d67;
 }
 
 html {

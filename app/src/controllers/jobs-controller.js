@@ -8,10 +8,13 @@ export const jobsController = {
 
     Job.count = 0;
 
+    if (!resultWrapper.classList.contains("loading")) {
+      resultWrapper.classList.add("loading");
+    }
+
     const renderType = {
       specify(jobs) {
         jobs[0].forEach((job) => {
-          console.log(job);
           resultWrapper.appendChild(
             jobsController.generateCard(new Job(job, path))
           );

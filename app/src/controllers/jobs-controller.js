@@ -65,9 +65,15 @@ export const jobsController = {
 
     jobItem.appendChild(jobBanner);
     jobItem.appendChild(jobContent);
+    this.setCardId(jobItem, job)
 
     return jobItem;
   },
+
+  setCardId(card, job) {
+    card.dataset.job = job.id;
+  },
+
 
   generateCardContent(job) {
     const itemContent = elementController.generateElement(
@@ -150,8 +156,8 @@ export const jobsController = {
     chatIcon.classList.add("fa-comment-dots");
 
     detailButton.dataset.modal = "open";
-    detailButton.addEventListener("click", () => {
-      modalController.openModal();
+    detailButton.addEventListener("click", (evt) => {
+      modalController.openModal(evt.target);
     })
 
     chatLink.appendChild(chatIcon);
